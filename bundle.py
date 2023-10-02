@@ -4,8 +4,35 @@ import subprocess
 # Obtenha o caminho da pasta atual (diretório de trabalho)
 caminho_atual = os.getcwd()
 
+
+
+# pasta do .aab ////////////////////////////////////
+
+# Diretório onde você deseja procurar arquivos .aab
+diretorio_procura = caminho_atual
+
+# Lista de arquivos com a extensão .aab
+arquivos_aab = [f for f in os.listdir(diretorio_procura) if f.endswith('.aab')]
+
+# Exibe a lista de arquivos .aab encontrados
+for arquivo in arquivos_aab:
+    caminho_aab = os.path.join(diretorio_procura, arquivo)
+    print(f'Encontrado arquivo .aab: {caminho_aab}')
+    
+
+
+
+# //////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
 # Caminho para o arquivo AAB dentro da pasta atual
-caminho_aab = os.path.join(caminho_atual, 'app.aab')
+#caminho_aab = os.path.join(caminho_atual, 'app.aab')
 
 # Caminho para o APK de destino dentro da pasta atual
 caminho_apk = os.path.join(caminho_atual, 'seu_app.apks')
@@ -37,7 +64,7 @@ import zipfile
 nome_arquivo_zip = 'seu_app.apks'
 
 # Diretório de destino para extrair o conteúdo
-diretorio_destino = 'pasta_de_destino'
+diretorio_destino = 'pasta_d0_apk'
 
 # Crie um objeto ZipFile
 with zipfile.ZipFile(nome_arquivo_zip, 'r') as arquivo_zip:
