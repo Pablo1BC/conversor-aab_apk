@@ -64,7 +64,7 @@ import zipfile
 nome_arquivo_zip = 'seu_app.apks'
 
 # Diretório de destino para extrair o conteúdo
-diretorio_destino = 'pasta_d0_apk'
+diretorio_destino = 'pasta_do_apk'
 
 # Crie um objeto ZipFile
 with zipfile.ZipFile(nome_arquivo_zip, 'r') as arquivo_zip:
